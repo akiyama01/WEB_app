@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/* CSS Document */
+#navigation .navi-inner .navi-content ul {
+  width: 686px;
+}
+
+#navigation .navi-inner .navi-content ul li.top {
+  float: none;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* =============================================================================
+   login box global
+   ========================================================================== */
+.login-h1 span {
+  padding: 36px 0 12px 70px;
+  display: inline-block;
+  background: url(../img/login-h1-001.png) no-repeat left center;
+}
+
+.loginbox {
+  padding: 10px 20px 30px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.loginbox ul li {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.loginbox ul li a,
+a:link,
+a:active {
+  color: #006699;
+  text-decoration: none;
+}
+
+.loginbox ul li a:hover {
+  color: #4eade1;
+}
+
+.loginbox ul li.icon-forgot-pass {
+  background: url(../img/icon-login-arrow.png) no-repeat;
+  padding: 0 0 0 25px;
+}
+
+.loginbox ul li.icon-login-help {
+  background: url(../img/icon-help-login.png) no-repeat;
+  padding: 0 0 0 25px;
+}
+
+.loginbox ul li.icon-forgot-pass a,
+.loginbox ul li.icon-login-help a {
+  text-decoration: underline;
+}
+
+.loginbox ul li.icon-forgot-pass a:hover,
+.loginbox ul li.icon-login-help a:hover {
+  text-decoration: none;
+}
+
+.loginbox ul li.icon-healthchk {
+  width: 196px;
+  margin: 20px auto;
+  background: url(../img/ico-healthchk.png) no-repeat 4px 6px;
+  padding: 3px 0 0 30px;
+  border: 1px solid #4eade1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+}
+
+.loginbox ul li.icon-healthchk img {
+  vertical-align: middle;
+}
+
+.loginbox ul li.icon-healthchk a {
+  width: 206px;
+  height: 30px;
+  display: block;
+}
+
+/* =============================================================================
+   Forms global
+   ========================================================================== */
+.qwikform {
+}
+
+.qwikform ::-webkit-input-placeholder {
+  color: #959595;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 4px 0;
+}
+
+.hasPlaceholder {
+  color: #c5d6d6;
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+.qwikform input:-moz-placeholder,
+.qwikform textarea:-moz-placeholder {
+  color: #959595;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 4px 0;
+}
+
+.qwikform input.placeholder_text,
+.qwikform textarea.placeholder_text {
+  color: #959595;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 4px 0;
+}
+
+.qwikform a,
+.qwikform a:visited {
+  color: #6e7b7e;
+}
+
+.qwikform a:hover,
+.qwikform a:focus {
+  color: #444;
+}
+
+.qwikform .field,
+.qwikform .notes {
+  color: #6e7b7e;
+  font-family: sans-serif;
+}
+
+.qwikform .field {
+  background-color: #fff;
+  border: 1px solid #b5c8ce;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 50px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.qwikform .field .ondes {
+  color: #999;
+}
+
+.qwikform .field .nodes {
+  color: #000;
+}
+
+.qwikform .error {
+  border-color: #cd353f;
+}
+
+.qwikform .field-input {
+}
+
+.qwikform .field-input input {
+  border: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-weight: normal;
+  height: 50px;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.qwikform .field-input input:focus,
+.qwikform .field-input input:active {
+  border: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  background: #fdfbd6;
+}
+
+.qwikform .field-file {
+  position: relative;
+}
+
+.qwikform .field-file input {
+  position: relative;
+  z-index: 1;
+}
+
+.qwikform .field-check {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 0 4px;
+}
+
+.qwikform .field-check label {
+  cursor: pointer;
+}
+
+.qwikform .field-check input {
+  margin-right: 3px;
+  position: relative;
+  top: -1px;
+}
+
+.qwikform .notes {
+  font-size: 12px;
+  padding: 10px 0 20px 17px;
+}
+
+.qwikform .submit {
+  margin: 10px 0;
+}
+
+.qwikform .submit:hover {
+  opacity: 0.6;
+}
+
+.qwikform .error {
+  background: #fdfbd6;
+  color: #ee2554;
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+/* =============================================================================
+   latest info
+   ========================================================================== */
+#contents .contents-inner .contents-inner-entry #login_info h2,
+#contents .contents-inner .contents-inner-entry #newcustomer h2 {
+  margin-bottom: 10px;
+  padding: 0;
+  color: #f07894;
+}
+
+#login_info ul {
+  height: 100px;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0 30px;
+}
+
+#login_info ul li {
+  list-style: inside disc;
+  font-size: 14px;
+}
+
+/* =============================================================================
+   no id
+   ========================================================================== */
+#newcustomer {
+  margin: 20px 0 30px;
+}
+
+#newcustomer p {
+  padding: 0 0 0 100px;
+  background: url(../img/icon-monitor.png) no-repeat left top;
+  line-height: 30px;
+  height: 80px;
+}
+
+#newcustomer p span.login-sample-pass {
+  display: block;
+  padding: 8px 0 0 0;
+}
+
+#newcustomer p span.gr {
+  color: #7d7d7d;
+}
+
+/* =============================================================================
+   security notice
+   ========================================================================== */
+#security_notice {
+  border-top: 1px dotted #dddddd;
+}
+
+#security_notice ul {
+  padding: 10px 0 0 130px;
+  /*background: url(../img/login-norton-secured.png) no-repeat left bottom;*/
+  margin: 20px 0 40px;
+}
+
+#security_notice ul li {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#security_notice ul li span {
+  color: #7d7d7d;
+}
