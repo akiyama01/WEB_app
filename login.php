@@ -35,8 +35,31 @@
 
       <div class="index-inner clearfix">
           <!--form-->
-          <div class="loginbox">
-			<form name="common_loginActionForm" id="loginForm" method="post" action="/webkarte/common/login/;jsessionid=1AB8E738F1AED20929EB68A30D8F4F8C" class="qwikform">
+          
+            <form method="post" action="web2.php">
+            <div class="jumbotron">
+            <fieldset>
+
+               <!-- <div class="field field-input" style="position:relative; display: block; width:500px;">
+               <input type="text" name="loginId" maxlength="12" value="" onblur="phshow(this);" onfocus="phhide(this);" id="loginid" style="ime-mode:disabled;" title="ログインID">
+               <span class="placeholder" onclick="phclick(this);"> ログインID</span>
+               </div>
+                      
+                      <div class="field field-input" style="position:relative; display: block; width:500px;">
+                      <input type="password" name="password" maxlength="20" value="" onblur="phshow(this);" onfocus="phhide(this);" id="password" style="ime-mode:disabled;" title="パスワード">
+                      <span class="placeholder" onclick="phclick(this);"> パスワード</span>
+                      </div>
+                       -->
+              <label>ID<input type="text" name="user_id"></label><br>
+              <label>PW<input type="text" name="pass"></label><br>
+              <div class="error"></div>
+              <button type="submit" title="ログイン" alt="ログイン">ログイン</button>
+              </fieldset>
+              </div>
+            
+            </form>
+                <!-- <div class="loginbox">
+			<form name="common_loginActionForm" id="loginForm" method="post" action="/webkarte/common/login/" class="qwikform">
                 <div class="field field-input" style="position:relative; display: block; width:500px;">
                 <input type="text" name="loginId" maxlength="12" value="" onblur="phshow(this);" onfocus="phhide(this);" id="loginid" style="ime-mode:disabled;" title="ログインID">
                 <span class="placeholder" onclick="phclick(this);"> ログインID</span>
@@ -48,11 +71,27 @@
 
                 </div>
                 
-                <div class="error"></div>
+                <div class="error"><div id="errormessage" class="error_back"><font color="#ff0000" style="font-size:10pt;">セッションがタイムアウトしました。再度、ログインしてください。		</font><br /></div></div>
                 <div class="submit">
-                <button onclick="javascript:login();" id="login" title="ログイン" alt="ログイン">ログイン</button>
-                </div>
-            </form>
+                <input type="image" name="login" src="/webkarte/img/login-btn-no.png" onclick="javascript:login();" id="login" title="ログイン" alt="ログイン">　
+                </div> -->
+
+
+
+                <!-- これは授業でやったところ<form method="post" action="insert.php">
+  <div class="jumbotron">
+   <fieldset>
+    <legend>フリーアンケート</legend>
+     <label>名前：<input type="text" name="name"></label><br>
+     <label>Email：<input type="text" name="email"></label><br>
+     <label><textArea name="naiyou" rows="4" cols="40"></textArea></label><br>
+     <input type="submit" value="送信">
+    </fieldset>
+  </div>
+</form> -->
+
+
+                
 
             <ul>
                 <li class="icon-forgot-pass"><a href="javascript:wopen2();">ID、パスワードを忘れてしまった方はこちらへ（透析患者さま用）</a></li>
