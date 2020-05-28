@@ -48,6 +48,7 @@ if($status==false){
     <div class="container-fluid">
       <div class="navbar-header">
       <a class="navbar-brand" href="index.php">データ登録</a>
+      ようこそ
       </div>
     </div>
   </nav>
