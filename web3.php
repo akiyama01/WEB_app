@@ -21,9 +21,13 @@ if($status==false){
 }else{
   //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<p>";
-    $view .= $result["user_id"].":".$result["pass"];
-    $view .= "</p>";
+    
+    $view .= $result["name"]."さん ようこそ";
+    $view .= "<p>"."身長".$result["height"]."cm"."</p>";
+    $view .= "<p>"."体重".$result["body_weight"]."kg"."</p>";
+    $view .= "<p>"."血圧".$result["blood_pressure"]."mmHg"."</p>";
+    $view .= "<p>"."脈拍".$result["pulse"]."/分"."</p>";
+    
   }
 
 }
@@ -36,19 +40,15 @@ if($status==false){
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- <link rel="stylesheet" href="css/range.css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<style>div{padding: 10px;font-size:16px;}</style>
-</head> -->
+<link rel="stylesheet" href="web3.css">
+</head>
 <body id="main">
 <!-- Head[Start] -->
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">データ登録</a>
-      ようこそ
+      <a class="navbar-brand" href="index.php"></a> 
       </div>
     </div>
   </nav>
@@ -59,6 +59,11 @@ if($status==false){
 <div>
     <div class="container jumbotron"><?=$view?></div>
 </div>
+
+<div id="a">WEBカルテメニュー</div>
+<img id="b" src="https://i1.wp.com/ptotstnews-blog.com/wp-content/uploads/2019/08/275971aa927391515036e950a5627849.png?w=646&ssl=1" alt="人体">
+<div id="c">前回の健診結果を見る</div>
+</script>
 <!-- Main[End] -->
 
 </body>

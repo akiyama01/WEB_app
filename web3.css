@@ -1,0 +1,18 @@
+#a {
+  text-align: center;
+  color: crimson;
+  font-size: 100px;
+}
+
+#b {
+  width: 30%;
+  display: flex;
+  margin-top: 5%;
+  margin-left: 35%;
+}
+
+#c {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}

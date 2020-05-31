@@ -34,7 +34,7 @@
       <h1 class="login-h1"><span>WEBカルテログイン<br/></span></h1>
 
       <div class="index-inner clearfix">
-          <!--form-->
+         
           
             <form method="post" action="web2.php">
             <div class="jumbotron">
