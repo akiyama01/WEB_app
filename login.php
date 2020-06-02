@@ -36,28 +36,21 @@
       <div class="index-inner clearfix">
          
           
-            <form method="post" action="web2.php">
-            <div class="jumbotron">
-            <fieldset>
+  <form method="post" action="web2.php">
+  <div class="jumbotron">
+  <fieldset>
 
-               <!-- <div class="field field-input" style="position:relative; display: block; width:500px;">
-               <input type="text" name="loginId" maxlength="12" value="" onblur="phshow(this);" onfocus="phhide(this);" id="loginid" style="ime-mode:disabled;" title="ログインID">
-               <span class="placeholder" onclick="phclick(this);"> ログインID</span>
-               </div>
-                      
-                      <div class="field field-input" style="position:relative; display: block; width:500px;">
-                      <input type="password" name="password" maxlength="20" value="" onblur="phshow(this);" onfocus="phhide(this);" id="password" style="ime-mode:disabled;" title="パスワード">
-                      <span class="placeholder" onclick="phclick(this);"> パスワード</span>
-                      </div>
-                       -->
-              <label>ID<input type="text" name="user_id"></label><br>
-              <label>PW<input type="text" name="pass"></label><br>
-              <div class="error"></div>
-              <button type="submit" title="ログイン" alt="ログイン">ログイン</button>
-              </fieldset>
-              </div>
-            
-            </form>
+ 
+   <label>ID<input type="text" name="user_id"></label><br>
+   <label>PW<input type="text" name="pass"></label><br>
+   <div class="error"></div>
+   <button type="submit" title="ログイン" alt="ログイン">ログイン</button>
+   </fieldset>
+  </div>
+  </form>
+
+
+
                 <!-- <div class="loginbox">
 			<form name="common_loginActionForm" id="loginForm" method="post" action="/webkarte/common/login/" class="qwikform">
                 <div class="field field-input" style="position:relative; display: block; width:500px;">
@@ -93,14 +86,7 @@
 
                 
 
-            <ul>
-                <li class="icon-forgot-pass"><a href="javascript:wopen2();">ID、パスワードを忘れてしまった方はこちらへ（透析患者さま用）</a></li>
-                <li class="icon-login-help"><a href="javascript:wopen1();">ヘルプを見る</a></li>
-                <li class="icon-healthchk"><a href="https://web.health-check.jp/webkarte/" target="_blank">健診ご利用者さまはこちらへ<img src="/webkarte/img/ico-sarrow.png;jsessionid=1AB8E738F1AED20929EB68A30D8F4F8C" width="20" height="20" alt="" /></a></li>
-            </ul>
-        </div>
-          <!--form-->
-		
+
 			
 			</div>
 			</div>
@@ -119,8 +105,7 @@
 
 <div id="footer">
   <ul class="ftr-newwindow">
-    <li><a href="http://www.zenjinkai.or.jp/" target="_blank">善仁会グループサイト</a></li>
-    <li><a href="http://www.health-check.jp/" target="_blank">ヘルチェックサイト</a></li>
+  
   </ul>
   <img src="/webkarte/img/logo-footer.png;jsessionid=1AB8E738F1AED20929EB68A30D8F4F8C" alt="医療法人社団善仁会" />
   <p class="copyright">Copyright(c) 2015 ZENJINKAI GROUP All rights reserved.</p>

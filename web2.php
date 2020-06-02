@@ -6,8 +6,8 @@ $user_id = $_POST["user_id"];
 $pass = $_POST["pass"];
 
 
-//2. DB接続します xxxにDB名を入力する
-//ここから作成したDBに接続をしてデータを登録します xxxxに作成したデータベース名を書きます
+//2. DB接続します 
+
 try {
   $pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
@@ -32,15 +32,21 @@ if($res==false){
   
 $val = $stmt->fetch();
 
-if( $val["id"] !="" ){
-$_SESSION["chk_ssid"]    = session_id();
+if( $val["id"] >2 ){
+$_SESSION["user_id"]    = session_id();
 $_SESSION["name"]   = $val['name'];
-
-
 header("Location: web3.php");
-}else{
-  header("Location: login.php");
+}else if( $val["id"] ==1 ){
+$_SESSION["user_id"]    = session_id();
+$_SESSION["name"]   = $val['name'];
+header("Location: list.php");
+}else if( $val["id"] ==2 ){
+  $_SESSION["user_id"]    = session_id();
+  $_SESSION["name"]   = $val['name'];
+  header("Location: list.php");
+}else {header("Location: login.php");
 }
-exit();
+  exit();
+  
 
 ?>

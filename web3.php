@@ -1,38 +1,7 @@
 <?php
-//1.  DB接続します xxxにDB名を入れます
-try {
-// mampの場合は注意です！違います！別途後ほど確認します！
-$pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
-} catch (PDOException $e) {
-  exit('データベースに接続できませんでした。'.$e->getMessage());
-}
-
-//２．データ登録SQL作成
-//作ったテーブル名を書く場所  xxxにテーブル名を入れます
-$stmt = $pdo->prepare("SELECT * FROM medical_chart");
-$status = $stmt->execute();
-
-//３．データ表示
-$view="";
-if($status==false){
-  //execute（SQL実行時にエラーがある場合）
-  $error = $stmt->errorInfo();
-  exit("ErrorQuery:".$error[2]);
-}else{
-  //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
-  while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    
-    $view .= $result["name"]."さん ようこそ";
-    $view .= "<p>"."身長".$result["height"]."cm"."</p>";
-    $view .= "<p>"."体重".$result["body_weight"]."kg"."</p>";
-    $view .= "<p>"."血圧".$result["blood_pressure"]."mmHg"."</p>";
-    $view .= "<p>"."脈拍".$result["pulse"]."/分"."</p>";
-    
-  }
-
-}
+session_start();
+$view = 'ようこそ'.$_SESSION["name"].'さん';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -43,17 +12,6 @@ if($status==false){
 <link rel="stylesheet" href="web3.css">
 </head>
 <body id="main">
-<!-- Head[Start] -->
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      <a class="navbar-brand" href="index.php"></a> 
-      </div>
-    </div>
-  </nav>
-</header>
-<!-- Head[End] -->
 
 <!-- Main[Start] $view-->
 <div>
