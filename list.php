@@ -4,37 +4,34 @@ session_start();
 $view = $_SESSION["name"].'お疲れ様です';
 
 
-$sql = "SELECT * 
-        FROM medical_chart 
-        WHERE id >= 2";
 
-$view2 = ($sql);
-// try {
+
+try {
     
-//     $pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
-//     } catch (PDOException $e) {
-//       exit('データベースに接続できませんでした。'.$e->getMessage());
-//     }
+    $pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
+    } catch (PDOException $e) {
+      exit('データベースに接続できませんでした。'.$e->getMessage());
+    }
 
 
     
-//     $stmt = $pdo->prepare("SELECT * FROM medical_chart");
-//     $status = $stmt->execute();
+    $stmt = $pdo->prepare("SELECT * FROM medical_chart WHERE id>2");
+    $status = $stmt->execute();
     
 
 
 
-// if($status==false) {
-//     $error = $stmt->errorInfo();
-//     exit("ErrorQuery:".$error[2]);
+if($status==false) {
+    $error = $stmt->errorInfo();
+    exit("ErrorQuery:".$error[2]);
 
-// } else {
-//     while($result=$stmt->fetch(PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE)){
-//         'id' => '2',
-//         $view .= "<p>".$result["name"]."さん"."<p>";
-//         $view .= "身長".$result["height"]."cm"."-"."体重".$result["body_weight"]."kg"."-"."血圧".$result["blood_pressure"]."mmHg"."-"."脈拍".$result["pulse"]."/分";
-//     }
-// }
+} else {
+    while($result=$stmt->fetch(PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE)){
+        
+        $view .= "<p>".$result["name"]."さん"."<p>";
+        $view .= "身長".$result["height"]."cm"."<button>"."変更"."</button>"."体重".$result["body_weight"]."kg"."<button>"."変更"."</button>"."血圧".$result["blood_pressure"]."mmHg"."<button>"."変更"."</button>"."脈拍".$result["pulse"]."/分"."<button>"."変更"."</button>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +43,6 @@ $view2 = ($sql);
 </head>
 <body>
 <div class="container jumbotron"><?=$view?></div>
-<div class="container jumbotron"><?=$view2?></div>
+
 </body>
 </html>
