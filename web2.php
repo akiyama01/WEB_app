@@ -32,7 +32,7 @@ if($res==false){
   
 $val = $stmt->fetch();
 
-if( $val["id"] >2 ){
+if( $val["type"] =="patient" ){
 $_SESSION["user_id"]    = session_id();
 $_SESSION["name"]   = $val['name'];
 header("Location: web3.php");

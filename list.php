@@ -4,8 +4,6 @@ session_start();
 $view = $_SESSION["name"].'お疲れ様です';
 
 
-
-
 try {
     
     $pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
@@ -29,9 +27,11 @@ if($status==false) {
     while($result=$stmt->fetch(PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE)){
         
         $view .= "<p>".$result["name"]."さん"."<p>";
-        $view .= "身長".$result["height"]."cm"."<button>"."変更"."</button>"."体重".$result["body_weight"]."kg"."<button>"."変更"."</button>"."血圧".$result["blood_pressure"]."mmHg"."<button>"."変更"."</button>"."脈拍".$result["pulse"]."/分"."<button>"."変更"."</button>";
+        $view .= '<a href="kousin.php?id='.$result["id"].'">';
+        $view .="身長".$result["height"]."cm"."体重".$result["body_weight"]."kg"."血圧".$result["blood_pressure"]."mmHg"."脈拍".$result["pulse"]."/分";
+        $view .="</a>";
     }
-}
+}    
 ?>
 
 <!DOCTYPE html>

@@ -19,8 +19,33 @@ $view = 'ようこそ'.$_SESSION["name"].'さん';
 </div>
 
 <div id="a">WEBカルテメニュー</div>
+
+<div id="container">
+  <div class="button-1">
+    <div class="eff-1"></div>
+    <a href="web4.php"> 前回の健診結果 </a>
+  </div>
+  <div class="button-4">
+    <div class="eff-4"></div>
+    <a href="#"> 担当医 </a>
+  </div>
+  <div class="button-2">
+    <div class="eff-2"></div>
+    <a href="#"> 予防接種のご案内 </a>
+  </div>
+  <div class="button-3">
+    <div class="eff-3"></div>
+    <a href="#">お問い合わせ</a>
+  </div>
+</div>
+
 <img id="b" src="https://i1.wp.com/ptotstnews-blog.com/wp-content/uploads/2019/08/275971aa927391515036e950a5627849.png?w=646&ssl=1" alt="人体">
-<div id="c">前回の健診結果を見る</div>
+
+
+<footer>
+  <h1> <a href="https://codepen.io/Kiraken/" target="_blank"></a></h1>
+</footer>
+
 </script>
 <!-- Main[End] -->
 
