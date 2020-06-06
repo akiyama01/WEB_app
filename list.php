@@ -13,7 +13,7 @@ try {
 
 
     
-    $stmt = $pdo->prepare("SELECT * FROM medical_chart WHERE id>2");
+    $stmt = $pdo->prepare("SELECT * FROM medical_chart WHERE type='patient'");
     $status = $stmt->execute();
     
 

@@ -22,10 +22,10 @@ if($status==false) {
 } else {
     while($result=$stmt->fetch(PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE)){
       
-        $view .="<p>"."身長".$result["height"]."cm"."</p>";
-        $view .="<p>"."体重".$result["body_weight"]."kg"."</p>";
-        $view .="<p>"."血圧".$result["blood_pressure"]."mmHg"."</p>";
-        $view .="<p>"."脈拍".$result["pulse"]."/分"."</p>";
+        $view1 .="<p>"."身長".$result["height"]."cm"."</p>";
+        $view2 .="<p>"."体重".$result["body_weight"]."kg"."</p>";
+        $view3 .="<p>"."血圧".$result["blood_pressure"]."mmHg"."</p>";
+        $view4 .="<p>"."脈拍".$result["pulse"]."/分"."</p>";
     }
 }    
 
@@ -42,6 +42,17 @@ if($status==false) {
 </head>
 <body>
 <div class="container jumbotron" text-align: center; style="text-align: center;"><?=$view?></div>
+<table>
+
+  <tr>
+    <th>身長</th> <th>体重</th> <th>血圧</th>　<th>脈拍</th>
+  </tr>
+
+  <tr>
+    <td><$view1></td> <td><?=$view2></td> <td><?=$view3></td> <td><?=$view4></td>
+  </tr>
+  
+</table>
 
 </body>
 </html>
