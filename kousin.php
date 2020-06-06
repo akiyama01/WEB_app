@@ -33,7 +33,8 @@ try {
 </head>
 <body>
     <form method="post"  action="update.php">
-    <div class="jumbotron">
+    <div class="jumbotron" style="text-align: center; font-size: 25px ;
+                margin: 3em 500px;border: double 5px #4ec4d3;">
     <fieldset>
     <label>身長<input type="number" name="height" value="<?=$row["height"]?>"></label><br>
     <label>体重<input type="number" name="body_weight" value="<?=$row["body_weight"]?>"></label><br>

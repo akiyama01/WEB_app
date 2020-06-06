@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$view = "ようこそ".$_SESSION["name"]."さん";
+$view = $_SESSION["name"]."さんの前回の健診結果";
 
 try {
   $pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
@@ -41,7 +41,9 @@ if($status==false) {
     <title>Document</title>
 </head>
 <body>
-<div class="container jumbotron"text-align: center; style="text-align: center;"><?=$view?></div>
+<div class="container jumbotron"style="text-align: center;font-size: 30px; padding: 0.5em 1em;
+    margin: 2em 460px;font-weight: bold;color: #6091d3;background: #FFF;border: solid 3px #6091d3;
+    border-radius: 10px;"><?=$view?></div>
 
 </body>
 </html>

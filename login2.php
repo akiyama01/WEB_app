@@ -43,10 +43,6 @@ header("Location: medical_chart.php");
 $_SESSION["user_id"]    = session_id();
 $_SESSION["name"]   = $val['name'];
 header("Location: list.php");
-// }else if( $val["id"] ==2 ){
-//   $_SESSION["user_id"]    = session_id();
-//   $_SESSION["name"]   = $val['name'];
-//   header("Location: list.php");
 }else {header("Location: login.php");
 }
   exit();

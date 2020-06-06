@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$view = "ようこそ".$_SESSION["name"]."さん";
+$view = $_SESSION["name"]."さんの前回の健診結果";
 
 try {
   $pdo = new PDO('mysql:dbname=kadai_db;charset=utf8;host=localhost','root','');
@@ -22,10 +22,10 @@ if($status==false) {
 } else {
     while($result=$stmt->fetch(PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE)){
       
-        $view1 .="<p>"."身長".$result["height"]."cm"."</p>";
-        $view2 .="<p>"."体重".$result["body_weight"]."kg"."</p>";
-        $view3 .="<p>"."血圧".$result["blood_pressure"]."mmHg"."</p>";
-        $view4 .="<p>"."脈拍".$result["pulse"]."/分"."</p>";
+        $view .="<p>"."身長".$result["height"]."cm"."</p>";
+        $view .="<p>"."体重".$result["body_weight"]."kg"."</p>";
+        $view .="<p>"."血圧".$result["blood_pressure"]."mmHg"."</p>";
+        $view .="<p>"."脈拍".$result["pulse"]."/分"."</p>";
     }
 }    
 
@@ -41,18 +41,9 @@ if($status==false) {
     <title>Document</title>
 </head>
 <body>
-<div class="container jumbotron" text-align: center; style="text-align: center;"><?=$view?></div>
-<table>
-
-  <tr>
-    <th>身長</th> <th>体重</th> <th>血圧</th>　<th>脈拍</th>
-  </tr>
-
-  <tr>
-    <td><$view1></td> <td><?=$view2></td> <td><?=$view3></td> <td><?=$view4></td>
-  </tr>
-  
-</table>
+<div class="container jumbotron" style="text-align: center;font-size: 30px; padding: 0.5em 1em;
+    margin: 2em 460px;font-weight: bold;color: #6091d3;background: #FFF;border: solid 3px #6091d3;
+    border-radius: 10px;" ><?=$view?></div>
 
 </body>
 </html>
