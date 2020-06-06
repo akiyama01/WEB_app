@@ -42,7 +42,7 @@ if($status==false) {
     <title>Document</title>
 </head>
 <body>
-<div class="container jumbotron"><?=$view?></div>
+<div class="container jumbotron"text-align: center; style="text-align: center;"><?=$view?></div>
 
 </body>
 </html>
