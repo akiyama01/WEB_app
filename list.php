@@ -28,7 +28,7 @@ if($status==false) {
         
         $view .= "<p>".$result["name"]."さん"."<p>";
         $view .= '<a href="kousin.php?id='.$result["id"].'">';
-        $view .="身長".$result["height"]."cm"."_"."体重".$result["body_weight"]."kg"."_"."血圧".$result["blood_pressure"]."mmHg"."_"."脈拍".$result["pulse"]."/分";
+        $view .="身長".$result["height"]."cm"."_"."体重".$result["body_weight"]."kg"."_"."収縮期血圧".$result["blood_pressure"]."mmHg"."_"."脈拍".$result["pulse"]."/分";
         $view .="</a>";
     }
 }    
