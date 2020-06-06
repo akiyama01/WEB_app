@@ -32,10 +32,14 @@ if($res==false){
   
 $val = $stmt->fetch();
 
-if( $val["type"] =="patient" ){
+if( $val["type"] =="patient" AND $val["id"]=="3" ){
 $_SESSION["user_id"]    = session_id();
 $_SESSION["name"]   = $val['name'];
-header("Location: web3.php");
+header("Location: medical_chart.php");
+}else if( $val["type"] =="patient" AND $val["id"]=="4" ){
+  $_SESSION["user_id"]    = session_id();
+  $_SESSION["name"]   = $val['name'];
+  header("Location: medical_chart2.php");
 }else if( $val["id"] ==1 ){
 $_SESSION["user_id"]    = session_id();
 $_SESSION["name"]   = $val['name'];
