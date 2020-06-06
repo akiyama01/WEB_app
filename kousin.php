@@ -38,7 +38,7 @@ try {
     <fieldset>
     <label>身長<input type="number" name="height" value="<?=$row["height"]?>"></label><br>
     <label>体重<input type="number" name="body_weight" value="<?=$row["body_weight"]?>"></label><br>
-    <label>収縮期血圧<input type="number" name="blood_pressure" value="<?=$row["blood_pressure"]?>"></label><br>
+    <label>血圧<input type="number" name="blood_pressure" value="<?=$row["blood_pressure"]?>"></label><br>
     <label>脈拍<input type="number" name="pulse" value="<?=$row["pulse"]?>"></label><br>
     <input type="hidden" name="id" value="<?=$row["id"]?>">
     <input type="submit" value="更新">
